@@ -1,0 +1,9 @@
+.img-git{
+    width: 500px;
+    position: absolute;
+    display: flex;
+}
+
+.img-git:hover{
+    background-color: rgba(0,0,0,.1);
+}

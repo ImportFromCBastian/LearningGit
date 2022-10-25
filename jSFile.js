@@ -1,4 +1,4 @@
-let myFirstHtmlToJSCLass = document.getElementsByClassName("myClass");
+let myFirstHtmlToJSCLass = document.getElementsByClassName("img");
 
 console.log(myFirstHtmlToJSCLass);
 //hola

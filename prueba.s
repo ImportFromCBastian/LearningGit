@@ -1,12 +1,19 @@
 .data
-    peso: .double 83,7
-    estatura: .double 1,83
-    infra: .double 18,5
-    norm: .double 25,0
-    sobr: .double 30,0
-    imc: .double 0
-    estado: .double 0
-.code
-    ld r1 , A(r2)
-    sd r2 , B(r0) 
+a: .word -45
+b: .word 12
+
+c: .double 0
+.text
+#convert a integer to double and div
+	ld r1, a(r0)
+	mtc1 r1,f1
+	cvt.d.l f1 ,f1
+
+	ld r2 , b(r0)
+	mtc1 r2 , f2
+	cvt.d.l f2 , f2
+
+
+	div.d f3 , f1 , f2 
+	s.d f3 , c(r0)
 halt
